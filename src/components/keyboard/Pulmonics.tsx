@@ -15,6 +15,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { IMPOSSIBLE, MANNERS, NOT_USED, PLACES, PULMONICS } from "../../utils/ipa";
 
+import { PulmonicDescriptions } from "../../utils/ipaDescription";
+
 const useStyles = makeStyles((theme) => ({
   symbol: {
     padding: theme.spacing(0, 0.5),
@@ -74,7 +76,21 @@ const Pulmonics = (props: Props) => {
   const Cell = useCallback(
     ({ x, y }: { x: number; y: number }) => {
       const voiceless = PULMONICS[y]?.[x * 2];
+
+      if (voiceless == "" || voiceless == "_" || voiceless == undefined) {
+        var voicelessstring = "";
+      } else {
+        var voicelessstring = PulmonicDescriptions.get(voiceless)!;
+      }
+
+
       const voiced = PULMONICS[y]?.[x * 2 + 1];
+       if (voiced == "" || voiced == "_" || voiced == undefined) {
+
+        var voicedstring = "";
+      } else {
+        var voicedstring = PulmonicDescriptions.get(voiced)!;
+      }
 
       // Ignore borders around the Dental-Postalveolar column, except for fricatives
       const hasBorders = x < 2 || x > 4 || y === 4;

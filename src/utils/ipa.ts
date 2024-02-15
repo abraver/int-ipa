@@ -39,43 +39,83 @@ export const NOT_USED = "";
 const NUL = NOT_USED;
 
 // prettier-ignore
+// export const PULMONICS = [
+//   ["p", "b", NUL, NUL, NUL, NUL, "t", "d", NUL, NUL, "ʈ", "ɖ", "c", "ɟ", "k", "g", "q", "ɢ", NUL, IMP, "ʔ", IMP],
+//   [NUL, "m", NUL, "ɱ", NUL, NUL, NUL, "n", NUL, NUL, NUL, "ɳ", NUL, "ɲ", NUL, "ŋ", NUL, "ɴ", IMP, IMP, IMP, IMP],
+//   [NUL, "ʙ", NUL, NUL, NUL, NUL, NUL, "r", NUL, NUL, NUL, NUL, NUL, NUL, IMP, IMP, NUL, "ʀ", NUL, NUL, IMP, IMP],
+//   [NUL, NUL, NUL, "ⱱ", NUL, NUL, NUL, "ɾ", NUL, NUL, NUL, "ɽ", NUL, NUL, IMP, IMP, NUL, NUL, NUL, NUL, IMP, IMP],
+//   ["ɸ", "β", "f", "v", "θ", "ð", "s", "z", "ʃ", "ʒ", "ʂ", "ʐ", "ç", "ʝ", "x", "ɣ", "χ", "ʁ", "ħ", "ʕ", "h", "ɦ"],
+//   [IMP, IMP, IMP, IMP, NUL, NUL, "ɬ", "ɮ", NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, IMP, IMP, IMP, IMP],
+//   [NUL, NUL, NUL, "ʋ", NUL, NUL, NUL, "ɹ", NUL, NUL, NUL, "ɻ", NUL, "j", NUL, "ɰ", NUL, NUL, NUL, NUL, IMP, IMP],
+//   [IMP, IMP, IMP, IMP, NUL, NUL, NUL, "l", NUL, NUL, NUL, "ɭ", NUL, "ʎ", NUL, "ʟ", NUL, NUL, IMP, IMP, IMP, IMP]
+// ] as const;
+
+// export const CLICKS = [
+//   ["ʘ", "Bilabial"],
+//   ["ǀ", "Dental"],
+//   ["ǃ", "(Post)alveolar"],
+//   ["ǂ", "Palatoalveolar"],
+//   ["ǁ", "Alveolar lateral"],
+// ] as const;
+
+// export const IMPLOSIVES = [
+//   ["ɓ", "Bilabial"],
+//   ["ɗ", "Dental/alveolar"],
+//   ["ʄ", "Palatal"],
+//   ["ɠ", "Velar"],
+//   ["ʛ", "Uvular"],
+// ] as const;
+
+// // U+02BC
+// export const EJECTIVE = "ʼ";
+
+// export const EJECTIVES = [
+//   ["ʼ", "Examples:"],
+//   ["pʼ", "Bilabial"],
+//   ["tʼ", "Dental/alveolar"],
+//   ["kʼ", "Velar"],
+//   ["sʼ", "Alveolar fricative"],
+// ] as const;
+
 export const PULMONICS = [
-  ["p", "b", NUL, NUL, NUL, NUL, "t", "d", NUL, NUL, "ʈ", "ɖ", "c", "ɟ", "k", "g", "q", "ɢ", NUL, IMP, "ʔ", IMP],
-  [NUL, "m", NUL, "ɱ", NUL, NUL, NUL, "n", NUL, NUL, NUL, "ɳ", NUL, "ɲ", NUL, "ŋ", NUL, "ɴ", IMP, IMP, IMP, IMP],
-  [NUL, "ʙ", NUL, NUL, NUL, NUL, NUL, "r", NUL, NUL, NUL, NUL, NUL, NUL, IMP, IMP, NUL, "ʀ", NUL, NUL, IMP, IMP],
-  [NUL, NUL, NUL, "ⱱ", NUL, NUL, NUL, "ɾ", NUL, NUL, NUL, "ɽ", NUL, NUL, IMP, IMP, NUL, NUL, NUL, NUL, IMP, IMP],
-  ["ɸ", "β", "f", "v", "θ", "ð", "s", "z", "ʃ", "ʒ", "ʂ", "ʐ", "ç", "ʝ", "x", "ɣ", "χ", "ʁ", "ħ", "ʕ", "h", "ɦ"],
-  [IMP, IMP, IMP, IMP, NUL, NUL, "ɬ", "ɮ", NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, IMP, IMP, IMP, IMP],
-  [NUL, NUL, NUL, "ʋ", NUL, NUL, NUL, "ɹ", NUL, NUL, NUL, "ɻ", NUL, "j", NUL, "ɰ", NUL, NUL, NUL, NUL, IMP, IMP],
-  [IMP, IMP, IMP, IMP, NUL, NUL, NUL, "l", NUL, NUL, NUL, "ɭ", NUL, "ʎ", NUL, "ʟ", NUL, NUL, IMP, IMP, IMP, IMP]
+  ["p", "b", NUL, NUL, NUL, NUL, "t", "d", NUL, NUL, "t`", "d`", "c", "J\\", "k", "g", "q", "G\\", NUL, IMP, "\?", IMP],
+  [NUL, "m", NUL, "F", NUL, NUL, NUL, "n", NUL, NUL, NUL, "n`", NUL, "J", NUL, "N", NUL, "N\\", IMP, IMP, IMP, IMP],
+  [NUL, "B\\", NUL, NUL, NUL, NUL, NUL, "r", NUL, NUL, NUL, NUL, NUL, NUL, IMP, IMP, NUL, "R\\", NUL, NUL, IMP, IMP],
+  [NUL, NUL, NUL, NUL, NUL, NUL, NUL, "4", NUL, NUL, NUL, "r`", NUL, NUL, IMP, IMP, NUL, NUL, NUL, NUL, IMP, IMP],
+  ["p\\", "B", "f", "v", "T", "D", "s", "z", "S", "Z", "s`", "z`", "C", "j\\", "x", "G", "X", "R", "X\\", "\?\\", "h", "h\\"],
+  [IMP, IMP, IMP, IMP, NUL, NUL, "K", "K\\", NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, NUL, IMP, IMP, IMP, IMP],
+  [NUL, NUL, NUL, "v\\", NUL, NUL, NUL, "r\\", NUL, NUL, NUL, "r\\`", NUL, "j", NUL, "M\\", NUL, NUL, NUL, NUL, IMP, IMP],
+  [IMP, IMP, IMP, IMP, NUL, NUL, NUL, "l", NUL, NUL, NUL, "l`", NUL, "L", NUL, "L\\", NUL, NUL, IMP, IMP, IMP, IMP]
 ] as const;
 
 export const CLICKS = [
-  ["ʘ", "Bilabial"],
-  ["ǀ", "Dental"],
-  ["ǃ", "(Post)alveolar"],
-  ["ǂ", "Palatoalveolar"],
-  ["ǁ", "Alveolar lateral"],
+  ["O\\", "Bilabial"],
+  ["|\\", "Dental"],
+  ["!\\", "(Post)alveolar"],
+  ["=\\", "Palatoalveolar"],
+  ["|\\|\\", "Alveolar lateral"],
 ] as const;
 
 export const IMPLOSIVES = [
-  ["ɓ", "Bilabial"],
-  ["ɗ", "Dental/alveolar"],
-  ["ʄ", "Palatal"],
-  ["ɠ", "Velar"],
-  ["ʛ", "Uvular"],
+  ["b_<", "Bilabial"],
+  ["d_<", "Dental/alveolar"],
+  ["J\\_<", "Palatal"],
+  ["g_<", "Velar"],
+  ["G\\_<", "Uvular"],
 ] as const;
 
 // U+02BC
 export const EJECTIVE = "ʼ";
 
 export const EJECTIVES = [
-  ["ʼ", "Examples:"],
-  ["pʼ", "Bilabial"],
-  ["tʼ", "Dental/alveolar"],
-  ["kʼ", "Velar"],
-  ["sʼ", "Alveolar fricative"],
+  ["_>", "Examples:"],
+  ["p_>", "Bilabial"],
+  ["t_>", "Dental/alveolar"],
+  ["k_>", "Velar"],
+  ["s_>", "Alveolar fricative"],
 ] as const;
+
+
 
 export const NON_PULMONICS = [...CLICKS, ...IMPLOSIVES, ...EJECTIVES].map((v) => v[0]);
 
@@ -100,40 +140,75 @@ type VowelCoords = readonly (readonly [VowelLiteral, Coords])[];
  * in the trapezium shape
  */
 // prettier-ignore
+// export const VOWELS: VowelCoords = [
+//   // Close vowels
+//   [["i", "y"], [0, 0]],
+//   [["ɨ", "ʉ"], [0.5, 0]],
+//   [["ɯ", "u"], [1, 0]],
+
+//   // Near close vowels
+//   [["ɪ", "ʏ"], [0.2, 1/6]],
+//   [["", "ʊ"], [0.75, 1/6]],
+
+//   // Close-mid
+//   [["e", "ø"], [0, 1/3]],
+//   [["ɘ", "ɵ"], [0.5, 1/3]],
+//   [["ɤ", "o"], [1, 1/3]],
+
+//   // Mid
+//   ["ə", [0.5, 0.5]],
+
+//   // Open-mid
+//   [["ɛ", "œ"], [0, 2/3]],
+//   [["ɜ", "ɞ"], [0.5, 2/3]],
+//   [["ʌ", "ɔ"], [1, 2/3]],
+
+//   // Near-open
+//   [["æ", ""], [0, 5/6]],
+//   ["ɐ", [0.5, 5/6]],
+
+//   // Open
+//   [["a", "ɶ"], [0, 1]],
+//   [["ɑ", "ɒ"], [1, 1]],
+// ];
+
 export const VOWELS: VowelCoords = [
   // Close vowels
   [["i", "y"], [0, 0]],
-  [["ɨ", "ʉ"], [0.5, 0]],
-  [["ɯ", "u"], [1, 0]],
+  [["1", "}"], [0.5, 0]],
+  [["M", "u"], [1, 0]],
 
   // Near close vowels
-  [["ɪ", "ʏ"], [0.2, 1/6]],
-  [["", "ʊ"], [0.75, 1/6]],
+  [["I", "Y"], [0.2, 1/6]],
+  [["", "U"], [0.75, 1/6]],
 
   // Close-mid
-  [["e", "ø"], [0, 1/3]],
-  [["ɘ", "ɵ"], [0.5, 1/3]],
-  [["ɤ", "o"], [1, 1/3]],
+  [["e", "2"], [0, 1/3]],
+  [["@\\", "8"], [0.5, 1/3]],
+  [["7", "o"], [1, 1/3]],
 
   // Mid
-  ["ə", [0.5, 0.5]],
+  ["@", [0.5, 0.5]],
 
   // Open-mid
-  [["ɛ", "œ"], [0, 2/3]],
-  [["ɜ", "ɞ"], [0.5, 2/3]],
-  [["ʌ", "ɔ"], [1, 2/3]],
+  [["E", "9"], [0, 2/3]],
+  [["3", "3\\"], [0.5, 2/3]],
+  [["V", "O"], [1, 2/3]],
 
   // Near-open
-  [["æ", ""], [0, 5/6]],
-  ["ɐ", [0.5, 5/6]],
+  [["{", ""], [0, 5/6]],
+  ["6", [0.5, 5/6]],
 
   // Open
-  [["a", "ɶ"], [0, 1]],
-  [["ɑ", "ɒ"], [1, 1]],
+  [["a", "&"], [0, 1]],
+  [["A", "Q"], [1, 1]],
 ];
 
-export const STRESS = "ˈ";
-export const SECONDARY_STRESS = "ˌ";
+// export const STRESS = "ˈ";
+// export const SECONDARY_STRESS = "ˌ";
+
+export const STRESS = "\"";
+export const SECONDARY_STRESS = "\%";
 
 interface MiscChar {
   ipa: string;
@@ -144,70 +219,142 @@ interface MiscChar {
 
 export type MiscList = readonly Readonly<MiscChar>[];
 
+// export const DIACRITICS: MiscList = [
+//   { ipa: "\u0325", description: "Voiceless", examples: ["n", "d"] },
+//   { ipa: "\u032C", description: "Voiced", examples: ["s", "t"] },
+//   { ipa: "\u02B0", description: "Aspirated", examples: ["t", "d"] },
+//   { ipa: "\u0339", description: "More rounded", examples: ["ɔ"] },
+//   { ipa: "\u031C", description: "Less rounded", examples: ["ɔ"] },
+//   { ipa: "\u031F", description: "Advanced", examples: ["u"] },
+//   { ipa: "\u0320", description: "Retracted", examples: ["e"] },
+//   { ipa: "\u0308", description: "Centralized", examples: ["e"] },
+//   { ipa: "\u033D", description: "Mid-centralized", examples: ["e"] },
+//   { ipa: "\u0329", description: "Syllabic", examples: ["n"] },
+//   { ipa: "\u032F", description: "Non-syllabic", examples: ["n"] },
+//   { ipa: "\u02DE", description: "Rhoticity", examples: ["ə", "a"] },
+//   { ipa: "\u0324", description: "Breathy voiced", examples: ["b", "a"] },
+//   { ipa: "\u0330", description: "Creaky voiced", examples: ["b", "a"] },
+//   { ipa: "\u033C", description: "Linguolabial", examples: ["t", "d"] },
+//   { ipa: "\u02B7", description: "Labialized", examples: ["t", "d"] },
+//   { ipa: "\u02B2", description: "Palatalized", examples: ["t", "d"] },
+//   { ipa: "\u02E0", description: "Velarized", examples: ["t", "d"] },
+//   { ipa: "\u02E4", description: "Pharyngealized", examples: ["t", "d"] },
+
+//   { ipa: "\u032A", description: "Dental", examples: ["t", "d"] },
+//   { ipa: "\u033A", description: "Apical", examples: ["t", "d"] },
+//   { ipa: "\u033B", description: "Laminal", examples: ["t", "d"] },
+//   { ipa: "\u0303", description: "Nasalized", examples: ["e"] },
+//   { ipa: "\u207F", description: "Nasal release", examples: ["d"] },
+//   { ipa: "\u02E1", description: "Lateral release", examples: ["d"] },
+//   { ipa: "\u031A", description: "No audible release", examples: ["d"] },
+
+//   { ipa: "\u0334", description: "Velarized or pharyngealized", examples: ["l"] },
+
+//   { ipa: "\u031D", description: "Raised", examples: ["e"] },
+//   { ipa: "\u031E", description: "Lowered", examples: ["e"] },
+//   { ipa: "\u0318", description: "Advanced tongue root", examples: ["e"] },
+//   { ipa: "\u0319", description: "Retracted tongue root", examples: ["e"] },
+// ];
+
+
 export const DIACRITICS: MiscList = [
-  { ipa: "\u0325", description: "Voiceless", examples: ["n", "d"] },
-  { ipa: "\u032C", description: "Voiced", examples: ["s", "t"] },
-  { ipa: "\u02B0", description: "Aspirated", examples: ["t", "d"] },
-  { ipa: "\u0339", description: "More rounded", examples: ["ɔ"] },
-  { ipa: "\u031C", description: "Less rounded", examples: ["ɔ"] },
-  { ipa: "\u031F", description: "Advanced", examples: ["u"] },
-  { ipa: "\u0320", description: "Retracted", examples: ["e"] },
-  { ipa: "\u0308", description: "Centralized", examples: ["e"] },
-  { ipa: "\u033D", description: "Mid-centralized", examples: ["e"] },
-  { ipa: "\u0329", description: "Syllabic", examples: ["n"] },
-  { ipa: "\u032F", description: "Non-syllabic", examples: ["n"] },
-  { ipa: "\u02DE", description: "Rhoticity", examples: ["ə", "a"] },
-  { ipa: "\u0324", description: "Breathy voiced", examples: ["b", "a"] },
-  { ipa: "\u0330", description: "Creaky voiced", examples: ["b", "a"] },
-  { ipa: "\u033C", description: "Linguolabial", examples: ["t", "d"] },
-  { ipa: "\u02B7", description: "Labialized", examples: ["t", "d"] },
-  { ipa: "\u02B2", description: "Palatalized", examples: ["t", "d"] },
-  { ipa: "\u02E0", description: "Velarized", examples: ["t", "d"] },
-  { ipa: "\u02E4", description: "Pharyngealized", examples: ["t", "d"] },
+  { ipa: "_0", description: "Voiceless", examples: ["n", "d"] },
+  { ipa: "_v", description: "Voiced", examples: ["s", "t"] },
+  { ipa: "_h", description: "Aspirated", examples: ["t", "d"] },
+  { ipa: "_O", description: "More rounded", examples: ["O"] },
+  { ipa: "_c", description: "Less rounded", examples: ["O"] },
+  { ipa: "_+", description: "Advanced", examples: ["u"] },
+  { ipa: "_-", description: "Retracted", examples: ["e"] },
+  { ipa: "_\"", description: "Centralized", examples: ["e"] },
+  { ipa: "_x", description: "Mid-centralized", examples: ["e"] },
+  { ipa: "_=", description: "Syllabic", examples: ["n"] },
+  { ipa: "_^", description: "Non-syllabic", examples: ["n"] },
+  { ipa: "`", description: "Rhoticity", examples: ["ə", "a"] },
+  { ipa: "_t", description: "Breathy voiced", examples: ["b", "a"] },
+  { ipa: "_k", description: "Creaky voiced", examples: ["b", "a"] },
+  { ipa: "_N", description: "Linguolabial", examples: ["t", "d"] },
+  { ipa: "_w", description: "Labialized", examples: ["t", "d"] },
+  { ipa: "_j", description: "Palatalized", examples: ["t", "d"] },
+  { ipa: "_G", description: "Velarized", examples: ["t", "d"] },
+  { ipa: "_?\\", description: "Pharyngealized", examples: ["t", "d"] },
 
-  { ipa: "\u032A", description: "Dental", examples: ["t", "d"] },
-  { ipa: "\u033A", description: "Apical", examples: ["t", "d"] },
-  { ipa: "\u033B", description: "Laminal", examples: ["t", "d"] },
-  { ipa: "\u0303", description: "Nasalized", examples: ["e"] },
-  { ipa: "\u207F", description: "Nasal release", examples: ["d"] },
-  { ipa: "\u02E1", description: "Lateral release", examples: ["d"] },
-  { ipa: "\u031A", description: "No audible release", examples: ["d"] },
+  { ipa: "_d", description: "Dental", examples: ["t", "d"] },
+  { ipa: "_a", description: "Apical", examples: ["t", "d"] },
+  { ipa: "_m", description: "Laminal", examples: ["t", "d"] },
+  { ipa: "_~", description: "Nasalized", examples: ["e"] },
+  { ipa: "_n", description: "Nasal release", examples: ["d"] },
+  { ipa: "_l", description: "Lateral release", examples: ["d"] },
+  { ipa: "_}", description: "No audible release", examples: ["d"] },
 
-  { ipa: "\u0334", description: "Velarized or pharyngealized", examples: ["l"] },
+  { ipa: "_e", description: "Velarized or pharyngealized", examples: ["l"] },
 
-  { ipa: "\u031D", description: "Raised", examples: ["e"] },
-  { ipa: "\u031E", description: "Lowered", examples: ["e"] },
-  { ipa: "\u0318", description: "Advanced tongue root", examples: ["e"] },
-  { ipa: "\u0319", description: "Retracted tongue root", examples: ["e"] },
+  { ipa: "_r", description: "Raised", examples: ["e"] },
+  { ipa: "_o", description: "Lowered", examples: ["e"] },
+  { ipa: "_A", description: "Advanced tongue root", examples: ["e"] },
+  { ipa: "_q", description: "Retracted tongue root", examples: ["e"] },
 ];
+
+// export const MISC: MiscList = [
+//   {
+//     ipa: "\u0361",
+//     sym: `${FILLER}\u0361${FILLER}`,
+//     description: "Tie bar",
+//     examples: ["t͡ʃ", "d͡ʒ"],
+//   },
+//   { ipa: "w", sym: "w", description: "Voiced labial-velar approximant" },
+//   { ipa: "ʍ", sym: "ʍ", description: "Voiceless labial-velar fricative" },
+//   { ipa: "ɥ", sym: "ɥ", description: "Voiced labial-palatal approximant" },
+//   { ipa: "ʜ", sym: "ʜ", description: "Voiceless epiglottal fricative" },
+//   { ipa: "ʢ", sym: "ʢ", description: "Voiced epiglottal fricative" },
+//   { ipa: "ʡ", sym: "ʡ", description: "Epiglottal plosive" },
+//   { ipa: "ɺ", sym: "ɺ", description: "Voiced alveolar lateral flap" },
+//   { ipa: "ɕ", sym: "ɕ", description: "Voiceless alveolo-palatal fricative" },
+//   { ipa: "ʑ", sym: "ʑ", description: "Voiced alveolo-palatal fricative" },
+//   { ipa: "ɧ", sym: "ɧ", description: "Simultaneous ʃ and x" },
+// ] as const;
 
 export const MISC: MiscList = [
   {
     ipa: "\u0361",
-    sym: `${FILLER}\u0361${FILLER}`,
+    sym: `${FILLER}_${FILLER}`,
     description: "Tie bar",
-    examples: ["t͡ʃ", "d͡ʒ"],
+    examples: ["t_S", "d_Z"],
   },
   { ipa: "w", sym: "w", description: "Voiced labial-velar approximant" },
-  { ipa: "ʍ", sym: "ʍ", description: "Voiceless labial-velar fricative" },
-  { ipa: "ɥ", sym: "ɥ", description: "Voiced labial-palatal approximant" },
-  { ipa: "ʜ", sym: "ʜ", description: "Voiceless epiglottal fricative" },
-  { ipa: "ʢ", sym: "ʢ", description: "Voiced epiglottal fricative" },
-  { ipa: "ʡ", sym: "ʡ", description: "Epiglottal plosive" },
-  { ipa: "ɺ", sym: "ɺ", description: "Voiced alveolar lateral flap" },
-  { ipa: "ɕ", sym: "ɕ", description: "Voiceless alveolo-palatal fricative" },
-  { ipa: "ʑ", sym: "ʑ", description: "Voiced alveolo-palatal fricative" },
-  { ipa: "ɧ", sym: "ɧ", description: "Simultaneous ʃ and x" },
+  { ipa: "W", sym: "W", description: "Voiceless labial-velar fricative" },
+  { ipa: "H", sym: "H", description: "Voiced labial-palatal approximant" },
+  { ipa: "H\\", sym: "H\\", description: "Voiceless epiglottal fricative" },
+  { ipa: "<\\", sym: "<\\", description: "Voiced epiglottal fricative" },
+  { ipa: ">\\", sym: ">\\", description: "Epiglottal plosive" },
+  { ipa: "l\\", sym: "l\\", description: "Voiced alveolar lateral flap" },
+  { ipa: "s\\", sym: "s\\", description: "Voiceless alveolo-palatal fricative" },
+  { ipa: "z\\", sym: "z\\", description: "Voiced alveolo-palatal fricative" },
+  { ipa: "x\\", sym: "x\\", description: "Simultaneous ʃ and x" },
 ] as const;
 
+
+
+// export const SUPRASEGMENTALS: MiscList = [
+//   { ipa: STRESS, sym: STRESS, description: "Primary stress" },
+//   { ipa: SECONDARY_STRESS, sym: SECONDARY_STRESS, description: "Secondary stress" },
+//   { ipa: "ː", sym: "ː", description: "Long", examples: ["eː"] },
+//   { ipa: "ˑ", sym: "ˑ", description: "Half-long", examples: ["eˑ"] },
+//   { ipa: "\u0306", sym: `${FILLER}\u0306`, description: "Extra-short", examples: ["e\u0306"] },
+//   { ipa: "|", sym: "|", description: "Minor (foot) group" },
+//   { ipa: "‖", sym: "‖", description: "Major (intonation) group" },
+//   { ipa: ".", sym: ".", description: "Syllable break" },
+//   { ipa: "‿", sym: "‿", description: "Linking (absence of break)" },
+// ] as const;
+
+
 export const SUPRASEGMENTALS: MiscList = [
-  { ipa: STRESS, sym: STRESS, description: "Primary stress" },
-  { ipa: SECONDARY_STRESS, sym: SECONDARY_STRESS, description: "Secondary stress" },
-  { ipa: "ː", sym: "ː", description: "Long", examples: ["eː"] },
-  { ipa: "ˑ", sym: "ˑ", description: "Half-long", examples: ["eˑ"] },
-  { ipa: "\u0306", sym: `${FILLER}\u0306`, description: "Extra-short", examples: ["e\u0306"] },
+  { ipa: "\"", sym: "\"", description: "Primary stress"},
+  { ipa: "%", sym: "%", description: "Secondary stress" },
+  { ipa: ":", sym: ":", description: "Long", examples: ["eː"] },
+  { ipa: ":\\", sym: ":\\", description: "Half-long", examples: ["eˑ"] },
+  { ipa: "_X", sym: `_X`, description: "Extra-short", examples: ["e_X"] },
   { ipa: "|", sym: "|", description: "Minor (foot) group" },
-  { ipa: "‖", sym: "‖", description: "Major (intonation) group" },
+  { ipa: "||", sym: "||", description: "Major (intonation) group" },
   { ipa: ".", sym: ".", description: "Syllable break" },
-  { ipa: "‿", sym: "‿", description: "Linking (absence of break)" },
+  { ipa: "-\\", sym: "-\\", description: "Linking (absence of break)" },
 ] as const;
